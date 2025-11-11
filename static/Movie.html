@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+</head>
+<body>
+<h2>Movie Ticket Booking</h2>
+<form action="movie" method="post">
+    Movie Name: <input type="text" name="movieName"><br><br>
+    Theatre Name: <input type="text" name="theatreName"><br><br>
+    City:
+    <select name="city">
+        <option>Bangalore</option>
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+    </select><br><br>
+    Seat Type:
+    <input type="radio" name="seatType" value="Regular"> Regular
+    <input type="radio" name="seatType" value="VIP"> VIP<br><br>
+    Special Request:<br>
+    <textarea name="request" rows="3" cols="20"></textarea><br><br>
+    <input type="submit" value="Book Ticket">
+</form>
+</body>
+</html>
