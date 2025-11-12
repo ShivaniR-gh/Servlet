@@ -1,21 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Form</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<div class="card shadow-lg" style="width: 25rem;">
-<form action="food" method="post">
-    Customer Name: <input type="text" name="name"><br><br>
-    Dish Name: <input type="text" name="dish"><br><br>
-    Type:
-    <select name="type">
-        <option>Veg</option>
-        <option>Non-Veg</option>
-    </select><br><br>
-    Spice Level:
-    <input type="radio" name="spice" value="Low"> Low
-    <input type="radio" name="spice" value="Medium"> Medium
-    <input type="radio" name="spice" value="High"> High<br><br>
-    Address:<br>
-    <textarea name="address"></textarea><br><br>
-    <input type="submit" value="Order Food">
-</form>
+<body class="bg-light">
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg p-4" style="width: 28rem;">
+        <h2 class="card-title text-center mb-4">Food Order Form</h2>
+
+        <form action="food" method="post">
+
+            <!-- Customer Name -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <!-- Dish Name -->
+            <div class="mb-3">
+                <label for="dish" class="form-label">Dish Name</label>
+                <input type="text" class="form-control" id="dish" name="dish" required>
+            </div>
+
+            <!-- Type -->
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type" name="type" required>
+                    <option selected disabled>Select Type</option>
+                    <option>Veg</option>
+                    <option>Non-Veg</option>
+                </select>
+            </div>
+
+            <!-- Spice Level -->
+            <div class="mb-3">
+                <label class="form-label">Spice Level</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="spice" id="low" value="Low" required>
+                    <label class="form-check-label" for="low">Low</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="spice" id="medium" value="Medium" required>
+                    <label class="form-check-label" for="medium">Medium</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="spice" id="high" value="High" required>
+                    <label class="form-check-label" for="high">High</label>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">Order Food</button>
+            </div>
+
+        </form>
+    </div>
 </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

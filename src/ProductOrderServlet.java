@@ -1,5 +1,6 @@
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +15,15 @@ public class ProductOrderServlet extends HttpServlet {
 
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
+        Cookie[] cookies = req.getCookies();
+        if( cookies == null || cookies.length == 0 ){
+            out.println("<p>No cookies found. A new cookie has been added.</p>");
+        }else {
+            out.println("<h3>Cookies Found:</h3>");
+            for (Cookie cookie1 : cookies) {
+                System.out.println("Name : " + cookie1.getName() + " Value : " + cookie1.getValue());
+            }
+        }
 
         String product = req.getParameter("product");
         String quantity = req.getParameter("quantity");
