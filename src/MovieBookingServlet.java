@@ -24,5 +24,6 @@ public class MovieBookingServlet extends HttpServlet {
         out.println("<p>City: " + city + "</p>");
         out.println("<p>Seat Type: " + seatType + "</p>");
         out.println("<p>Request: " + request + "</p>");
+        out.println("<a href=MovieBookingServlet >book again</a>");
     }
 }
