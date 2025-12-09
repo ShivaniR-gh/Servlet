@@ -14,4 +14,3 @@ public class PetAdaptionDTO {
     private int experience;
     private String phone;
 }
-

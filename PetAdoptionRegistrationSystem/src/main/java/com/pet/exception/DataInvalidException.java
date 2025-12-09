@@ -1,7 +1,7 @@
 package com.pet.exception;
 
-public class DataInvalidException extends Exception{
-    DataInvalidException(String message){
+public class DataInvalidException extends Exception {
+    public DataInvalidException(String message) {
         super(message);
     }
 }
